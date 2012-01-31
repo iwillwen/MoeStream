@@ -5,5 +5,5 @@
         "webjs": "latest",
         "socket.io": "latest",
         "mongoose": "latest"
-    },
+    }
 }
