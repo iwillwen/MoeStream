@@ -4,6 +4,7 @@
     "dependencies": {
         "webjs": "latest",
         "socket.io": "latest",
-        "mongoose": "latest"
+        "mongoose": "latest",
+        "imagemagick": "latest"
     }
 }
