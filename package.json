@@ -1,0 +1,9 @@
+{
+    "name": "MoeStream",
+    "version": "0.0.3",
+    "dependencies": {
+        "webjs": "latest",
+        "socket.io": "latest",
+        "mongoose": "latest"
+    },
+}
