@@ -1,0 +1,55 @@
+!!! 5
+html
+    head
+        title MoeStream
+        meta(name="description", content="Moe Pictures Sharing Stream")
+        meta(name="author", content="Will Wen Gunn")
+        meta(name="version", content="0.0.1")
+        //Styles
+        link(rel="stylesheet", href="/css/typo.css")
+        link(rel="stylesheet", href="/css/style.css")
+        link(rel="stylesheet", href="/css/css3-buttons.css")
+        //JavaScript
+        script(src="/js/jquery.js")
+        script(src="/js/jquery.imagesloaded.js")
+        script(src="/js/jquery.masonry.min.js")
+        script(src="/socket.io/socket.io.js")
+        script(src="/js/moestream.js")
+        //Fonts
+        link(href="http://fonts.googleapis.com/css?family=PT+Sans", rel='stylesheet')
+        link(href='http://fonts.googleapis.com/css?family=Molengo',rel='stylesheet')
+    body
+        section.typo.wrapper
+            header.buttons
+                h1 MoeStream
+                button.action.red#upload
+                    span.label 上传新妹纸
+            div#upload_box
+                form#se
+                    input#file(type="file")
+                h1#drag_box 把妹纸拖到这里来~亲
+                input#url(type="text", placeholder="或者把地址写到这里，然后按回车~")
+                div.progress-bar.blue.stripes
+                    span(style="width: 0%;")
+                button#close_box ⨉
+            article.moes
+                div#container
+                    each moe in moes
+                        div.item
+                            a(href=moe.src, target="_blank", title=moe.src)
+                                img(src=moe.small)
+            footer
+                span.tagline_left.
+                     Powered By <a href="https://plus.google.com/u/0/102868260481271488857" target="_blank">Will Wen Gunn</a>
+                span.tagline_right()
+                    | Technology:
+                    | <br />
+                    |    Node.js -- webjs, Socket.IO, Mongoose, jade
+                    | <br />
+                    |    Browser --
+                    | <br />
+                    |       JavaScript --
+                    | <br />
+                    |           jQuery, Socket.IO, jQuery Masonry, jQuery ImagesLoaded
+                    | <br />
+                    |       CSS -- Typo, Google+ UI, Google Fonts
